@@ -2,21 +2,23 @@
 #define SCALARCONVERTER_HPP
 
 #include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <limits>
 
 
 enum input_case {
     NONE,
-    PRINTABLE_CHAR,
-    NON_PRINTABLE_CHAR,
+    CHAR,
     INTEGER,
     FLOAT_NUMBER,
-    SPECIAL_FLOAT,
     DOBUBLE_NUMBER,
-    SPECIAL_DOUBLE,
+    SPECIAL,
     ERROR
 };
 
-typedef void (*f) (const std::string, int& var) checker;
+typedef int (*detectType) (const std::string, int& var, int check) ;
+typedef void (*PrintTypes) (const std::string input, int& var);
 
 class ScalarConverter{
 
