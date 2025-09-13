@@ -11,9 +11,10 @@ enum input_case {
     NONE,
     CHAR,
     INTEGER,
+    SPECIAL_DOUBLE,
+    SPECIAL_FLOAT,
     FLOAT_NUMBER,
-    DOBUBLE_NUMBER,
-    SPECIAL,
+    DOUBLE_NUMBER,
     ERROR
 };
 
